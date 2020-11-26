@@ -1,0 +1,54 @@
+{
+    "description": "An ultra customizable generic theme for Stackbit",
+    "header": {
+        "title": "Starter",
+        "has_nav": true,
+        "nav_links": [
+            {
+                "label": "Events",
+                "url": "/events",
+                "style": "link"
+            },
+            {
+                "label": "Articles",
+                "url": "/articles",
+                "style": "link"
+            },
+            {
+                "label": "Downloads",
+                "url": "/downloads",
+                "style": "link"
+            },
+            {
+                "label": "About us",
+                "url": "/about",
+                "style": "link"
+            },
+            {
+                "label": "Contact",
+                "url": "/contact",
+                "style": "link",
+                "new_window": false,
+                "type": "action"
+            }
+        ],
+        "logo": "images/layer123logo.svg"
+    },
+    "footer": {
+        "has_nav": true,
+        "nav_links": [
+            {
+                "label": "Contact Us",
+                "url": "/contact",
+                "style": "link"
+            },
+            {
+                "label": "Privacy and Terms",
+                "url": "/terms",
+                "style": "link"
+            }
+        ],
+        "content": "&copy; Stackbit-Starter. All rights reserved."
+    },
+    "title": "Stackbit Starter Theme"
+}
