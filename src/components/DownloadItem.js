@@ -104,8 +104,10 @@ export default function DownloadItem({
   });
   const onClick = (e) => {
     if (typeof window.MktoForms2 !== 'undefined') {
-      window.MktoForms2.loadForm("//app-lon08.marketo.com", "578-PUY-745", 1259, (form) => {
+      window.MktoForms2.loadForm("//app-lon08.marketo.com", "578-PUY-745", 1246, (form) => {
         window.MktoForms2.lightbox(form).show();
+        console.log(form);
+        console.log(form.allFieldsFilled(), form.getValues(), form.getFormElem())
       });
     }
   };
