@@ -9,6 +9,9 @@ import Footer from './Footer';
 export default class Body extends React.Component {
     render() {
       const munchkin = function() {
+        if (typeof document === 'undefined') {
+          return;
+        }
         var didInit = false;
         function initMunchkin() {
           if (didInit === false) {
@@ -44,7 +47,7 @@ export default class Body extends React.Component {
                   </script>
               </Helmet>
               <div id="site-wrap" className="site">
-                <form id="mktoForm_1246"></form>
+                <form id="mktoForm_1259"></form>
                 <Header {...this.props} />
                 <main id="content" className="site-content">
                   {this.props.children}
