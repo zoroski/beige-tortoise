@@ -56,7 +56,7 @@ export default class Body extends React.Component {
               for (let field in mktoFields) {
                 mktoFields[field] = values[field];
               }
-              localStorage.setItem(e, storageKey, JSON.stringify(mktoFields));
+              localStorage.setItem(storageKey, JSON.stringify(mktoFields));
             });
   
             // mktoForm.onSuccess(function(e) {
