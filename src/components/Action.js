@@ -93,8 +93,8 @@ export default function Action({
   return (
     <Component
       center={center}
-      isActive={isActive}
-      nav={nav}
+      isactive={String(isActive)}
+      nav={String(nav)}
       to={withPrefix(action?.url)} {...(action?.new_window ? ({ target: '_blank', rel: 'noopener' }) : null)}
     >
       {action?.label}

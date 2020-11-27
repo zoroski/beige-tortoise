@@ -67,6 +67,13 @@ const Tag = styled.p`
   padding: 4px 10px;
 `;
 
+const Button = styled.button`
+  display: block;
+  margin: 30px auto 10px;
+  padding: 10px 20px;
+  background-color: #4388de;
+`;
+
 export default function DownloadItem({
   author,
   date,
@@ -95,6 +102,13 @@ export default function DownloadItem({
   const image = data.images.edges.find(n => {
     return n.node.absolutePath.includes(imageProp);
   });
+  const onClick = (e) => {
+    if (typeof window.MktoForms2 !== 'undefined') {
+      window.MktoForms2.loadForm("//app-lon08.marketo.com", "578-PUY-745", 1246, (form) => {
+        window.MktoForms2.lightbox(form).show();
+      });
+    }
+  };
   
   return (
     <Container>
@@ -103,6 +117,7 @@ export default function DownloadItem({
       <Author>by <strong>{ author }</strong></Author>
       <Date>{ date }</Date>
       <Tag>{ tag }</Tag>
+      <Button onClick={onClick}>Download</Button>
     </Container>
   );
 }
